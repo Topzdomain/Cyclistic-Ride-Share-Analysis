@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>DAX MEASURES</h1>
+<ul>
+<strong>Calender Table</strong>
+<p>Please note that any text from "--" is not part of the code</p>
+<ul>
+<li>Calendar = CALENDARAUTO()</li>
+<li>month no. = MONTH('Calendar'[Date])  --{sort the month no. column by month no.}</li>
+<li>month = FORMAT('Calendar'[Date], "mmm")</li>
+<li>day = FORMAT('Calendar'[Date],"ddd") --{sort the day column by day no.}</li>
+<li>Month-year = FORMAT('Calendar'[Date], "mmm-yyyy") --{sort the month-year column by Mth-year}</li>
+<li>Year = FORMAT('Calendar'[Date], "YYYY")</li>
+<li>Mth-year = FORMAT('Calendar'[Date], "mm-yyyy")  --{sort the Mth-year column by year</li>
+<li>Day no. = WEEKDAY('Calendar'[Date],1)  --{sort the Day no. column by Day no.</li>
+</ul>
+<p>Link the cyclistic data table to the calendar table using date column on the model space</p>
+
+<strong>All Measures</strong>
+<ul>
+<li>Total Rides = COUNTROWS('Cyclistic 2')</li>
+<li>Ride By Casual = CALCULATE([Total Rides],'Cyclistic 2'[member_casual]= "casual")</li>
+<li>Ride By Member = CALCULATE([Total Rides],'Cyclistic 2'[member_casual]= "member")</li>
+<li>Max Ride = MAX('Cyclistic 2'[ride_length]) --{This is formatted to show the max ride length as a whole number</li>
+<li>Max Ride Length = MAX('Cyclistic 2'[ride_length])</li>
+<li>Max Ride Length2 = FORMAT([Max Ride Length], 
+VAR days = INT([Max Ride Length])
+VAR _hrs = ([Max Ride Length]-days)*24
+VAR hrs= INT(_hrs)
+VAR _mins= (_hrs-hrs)*60
+VAR mins= INT(_mins)
+VAR secs= (_mins-mins)*60
+RETURN
+days&"""d """&FORMAT(hrs,"00")&"""h """&FORMAT(mins,"00")&"""m """&FORMAT(secs,"00")&"""s"""
+)  --{For the tooltip}</li>
+<li>Avg Ride Length = AVERAGE('Cyclistic 2'[ride_length])</li>
+<li>Avg Ride Length2 = FORMAT([Avg Ride Length], 
+VAR _hrs = [Avg Ride Length]*24
+VAR hrs= INT(_hrs)
+VAR _mins= (_hrs-hrs)*60
+VAR mins= INT(_mins)
+VAR secs= (_mins-mins)*60
+RETURN
+FORMAT(mins,"00")&"""m """&FORMAT(secs,"00")&"""s"""
+)  --{For the tooltip}</li>
+</ul>
