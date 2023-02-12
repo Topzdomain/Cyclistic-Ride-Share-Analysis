@@ -1,4 +1,4 @@
-Cyclistic Ride Sahre Analysis
+Cyclistic Ride Share Analysis
 
 Google Analytics Capstone Project using Cyclistic (Divvy) Bike-Share data
 
