@@ -1,4 +1,5 @@
-cyclistic-divvy-bikes
+Cyclistic Ride Sahre Analysis
+
 Google Analytics Capstone Project using Cyclistic (Divvy) Bike-Share data
 
 This CaseStudy was completed as part of the requirements for completing the Google Data Analytics Professional Certificate. The course comprised of 6 phases which are phases required for carrying out data analysis. This project was also completed following these phases. 
