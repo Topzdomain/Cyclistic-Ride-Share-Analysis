@@ -21,3 +21,5 @@ Insights from the Analyze Phase were presented using various viz on Power BI Das
 
 Act Phase
 Insights and recommendations were also presented on the Power BI Dashboards.
+
+Incase you do not have Power BI installed on your device, I have included snap shots of the visaulization pages. For the portrait visualization, the aim is to put all the insights, observations and recommendations on a page just like a flier, while the landscape visualization is more detailed. The pages are arranged the following order: Overview, Ride Metrics and Recommendation.
